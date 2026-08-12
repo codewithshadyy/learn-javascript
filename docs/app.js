@@ -22,6 +22,7 @@ function app(){
         display.append(li)
         
        }
+       
 
     })
 }
