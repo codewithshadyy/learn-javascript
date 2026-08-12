@@ -1,12 +1,12 @@
 
 
-function display(){
+function app(){
 
 
     const cities = [
         {name:"nairobi", population:123456, region:"nairobi"},
-        {name:"nairobi", population:123456, region:"nairobi"},
-        {name:"nairobi", population:123456, region:"nairobi"},
+        {name:"Eloret", population:56565, region:"Uasin gishu"},
+        {name:"Thika", population:654321, region:"nairobi"},
 
     ]
 
@@ -15,12 +15,15 @@ function display(){
 
     see.addEventListener("click", ()=>{
 
-        cities.forEach((city)=>{
-            display.innerHTML = `${city.name}:${city.population}:${city.region}`
-        })
+       for(let i = 0; i<=cities.length; i++){
+
+        const li = document.createElement("li")
+        li.innerHTML = `Name:${cities[i].name}  Population:${cities[i].population}   Region:${cities[i].region}`
+        display.append(li)
+        
+       }
 
     })
 }
 
-
-display()
+app()
